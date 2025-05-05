@@ -47,11 +47,11 @@ spec:
   selector:
     matchLabels:
       app: {{ .Values.irisapp.app }}
-      app.kubernetes.io/instance: {{ .Values.irisapp.app }}
   template:
     metadata:
       labels:
         app: {{ .Values.irisapp.app }}
+        app.kubernetes.io/instance: {{ .Values.irisapp.app }}
     spec:
       securityContext:
         {{- toYaml .Values.irisapp.podSecurityContext | nindent 8 }}
