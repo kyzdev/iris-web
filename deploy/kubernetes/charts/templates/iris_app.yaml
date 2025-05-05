@@ -50,7 +50,7 @@ spec:
   template:
     metadata:
       labels:
-        app: {{ .Values.irisapp.app }}
+        app.kubernetes.io/name: {{ .Values.irisapp.name }}
         app.kubernetes.io/instance: {{ .Values.irisapp.app }}
     spec:
       securityContext:
