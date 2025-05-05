@@ -50,8 +50,8 @@ spec:
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: {{ .Values.irisapp.name }}
-        app.kubernetes.io/instance: {{ .Values.irisapp.app }}
+        app: {{ .Values.irisapp.app }}
+        app.kubernetes.io/name: {{ .Values.irisapp.app }}
     spec:
       securityContext:
         {{- toYaml .Values.irisapp.podSecurityContext | nindent 8 }}
